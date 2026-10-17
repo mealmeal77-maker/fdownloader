@@ -17,22 +17,23 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle 8.7
+    - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
-      with:
-        gradle-version: '8.7'
 
-    - name: Build APK
+    - name: Build APK using Project Wrapper
       run: |
         cd fdownloader
-        # İhtiyaç duyulan boş ortam dosyalarını garantiye alıyoruz
+        # Boş ortam dosyaları
         touch .env.example .env
         mkdir -p app
         touch app/.env.example app/.env
-        
-        # Hazır kurulu Android SDK yolunu verip derliyoruz
-        export ANDROID_HOME=$ANDROID_SDK_ROOT
-        gradle assembleDebug --stacktrace
+
+        # Eksik olan gradlew başlatıcısını projenin kendi ayarlarıyla üret
+        gradle wrapper
+
+        # İzin ver ve projenin kendi Gradle sürümüyle derle
+        chmod +x gradlew
+        ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
