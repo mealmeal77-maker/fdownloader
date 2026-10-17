@@ -1,0 +1,6 @@
+{
+  "name": "Fdownloader",
+  "description": "Evrensel medya indirici, reklam engelleyici link yakalayıcı, akıllı dosya yöneticisi ve arka plan çevrimdışı oynatıcı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

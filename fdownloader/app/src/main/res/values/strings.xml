@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fdownloader</string>
+    <string name="share_with_streamvault">Fdownloader ile İndir</string>
+    <string name="tab_home">Keşfet &amp; İndir</string>
+    <string name="tab_downloads">İndirmeler</string>
+    <string name="tab_library">Kütüphane</string>
+    <string name="tab_shield">Kalkan &amp; Ayarlar</string>
+    <string name="paste_link_hint">Video, müzik veya sosyal medya linki yapıştırın…</string>
+    <string name="analyze_and_download">Analiz Et &amp; İndir</string>
+    <string name="notification_channel_name">Fdownloader İndirme Bildirimleri</string>
+    <string name="notification_channel_desc">Tamamlanan ve aktif medya indirmeleri için bildirimler</string>
+</resources>

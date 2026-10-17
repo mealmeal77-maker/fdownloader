@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Glowing Hexagon/Shield Frame -->
+    <path
+        android:fillColor="#1A00E5FF"
+        android:strokeColor="#FF00E5FF"
+        android:strokeWidth="2.5"
+        android:pathData="M54,24 L78,37.5 L78,65.5 L54,79 L30,65.5 L30,37.5 Z" />
+    <!-- Play Triangle + Download Arrow Fusion -->
+    <path
+        android:fillColor="#FF00E5FF"
+        android:pathData="M49,34 L59,34 L59,52 L67,52 L54,66 L41,52 L49,52 Z" />
+    <!-- Bottom Vault Tray Bar -->
+    <path
+        android:fillColor="#FF10B981"
+        android:pathData="M40,69 L68,69 L68,73.5 L40,73.5 Z" />
+</vector>
