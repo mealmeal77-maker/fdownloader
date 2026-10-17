@@ -17,23 +17,21 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-
     - name: Setup Gradle 8.7
       uses: gradle/actions/setup-gradle@v4
       with:
         gradle-version: '8.7'
 
-    - name: Create Missing Env Files & Build APK
+    - name: Build APK
       run: |
         cd fdownloader
-        # Eksik olan çevre dosyalarını oluşturuyoruz
+        # İhtiyaç duyulan boş ortam dosyalarını garantiye alıyoruz
         touch .env.example .env
         mkdir -p app
         touch app/.env.example app/.env
-
-        # Derleme komutu
+        
+        # Hazır kurulu Android SDK yolunu verip derliyoruz
+        export ANDROID_HOME=$ANDROID_SDK_ROOT
         gradle assembleDebug --stacktrace
 
     - name: Upload APK
